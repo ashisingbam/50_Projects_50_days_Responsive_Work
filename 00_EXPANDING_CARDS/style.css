@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.card-section {
+  overflow: hidden;
+  border-radius: 3rem;
+  position: relative;
+  max-width: 6rem;
+  transition: max-width 700ms ease-in;
+}
+
+.open.card-section {
+  max-width: 50rem;
+}
+
+.open.card-section h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.card-section:not(:last-child) {
+  margin-right: 1.2rem;
+}
+
+.card-section img {
+  display: block;
+  user-select: none;
+  cursor: pointer;
+}
+
+.card-section h3 {
+  position: absolute;
+  margin: 0;
+  bottom: 15px;
+  left: 20px;
+  font-size: 1.5rem;
+  color: white;
+  font-family: sans-serif;
+  opacity: 0;
+}
+
+@media(max-width: 1450px) {
+  .card-container {
+    max-width: 95vw;
+  }
+  .card-section:nth-child(5),
+  .card-section:nth-child(6) {
+    display: none;
+  }
+  .card-section {
+    max-width: 5rem;
+  }
+  .open.card-section {
+    max-width: 47rem;
+  }
+}
+
+@media(max-width: 1100px) {
+  .card-container {
+    flex-direction: column;
+  }
+  .card-section {
+    max-width: 65rem;
+    max-height: 4rem;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    transition: none;
+    transition: max-height 700ms ease-in;
+  }
+  .card-section:not(:last-child) {
+    margin-right: auto;
+  }
+  .open.card-section {
+    max-height: 27rem;
+    max-width: none;
+  }
+}
+
+@media(max-width: 850px) {
+  .card-section,
+  .open.card-section {
+    max-width: 35rem;
+  }
+}
+@media(max-width: 590px) {
+  .card-section,
+  .open.card-section {
+    max-width: 25rem;
+  }
+}
+
+@media(max-width: 590px) {
+  .card-section,
+  .open.card-section {
+    max-width: 20rem;
+  }
+}
+
+@media(max-height: 605px) {
+  .card-section {
+    max-height: 4rem;
+  }
+  .open.card-section {
+    max-height: 20rem;
+  }
+}
+
