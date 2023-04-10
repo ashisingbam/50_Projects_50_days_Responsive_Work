@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: #F6F7FB;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Muli', sans-serif;
+}
+
+.progress-bar {
+  width: 21.7rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.875rem;
+  position: relative;
+}
+
+.progress-bar::after {
+  content: "";
+  display: inline-block;
+  height: 4px;
+  width: 100%;
+  background-color: #E0E0E0;
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  z-index: -1;
+}
+
+#progress {
+  height: 4px;
+  width: 0%;
+  max-width: 99%;
+  background-color: #3498DB;
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  transition: width 250ms ease-in;
+}
+
+.progress-box {
+  border: 3px solid #E0E0E0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: #999999;
+  cursor: default;
+  position: relative;
+  background-color: #fff;
+  transition: border-color 200ms ease-in;
+}
+
+.first-div {
+  border-color: #3498DB;
+}
+
+.progress-btn {
+  gap: 5px;
+}
+
+.progress-btn button{
+  font-family: inherit;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+  background-color: #3498DB;
+  transition: background-color 100ms ease-in;
+  outline: 0;
+}
+
+.progress-btn button:active {
+  transform: scale(0.98);
+}
+
+.progress-btn .disabled {
+  background-color: #E0E0E0;
+  cursor: not-allowed;
+  pointer-events: all;
+}
